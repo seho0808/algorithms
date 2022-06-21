@@ -2,25 +2,48 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++ - Build and debug active file",
+      "name": "Cpp: Debug (Single File)",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
-      "externalConsole": false,
+      "program": "${fileDirname}/${fileBasenameNoExtension}Debug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "Cpp: Debug (Single File)",
       "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false,
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
-      "preLaunchTask": "C/C++: g++ build active file ver(1)",
-      "miDebuggerPath": "/usr/bin/gdb"
+      ]
+    },
+    {
+      "name": "Cpp: Debug (Folder)",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "program": "${fileDirname}/${fileBasenameNoExtension}Debug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "Cpp: Debug (Folder)",
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -30,12 +53,12 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "/root",
+      "cwd": "/root/coding",
       "environment": [],
-      "program": "/root/build/Debug/outDebug",
+      "program": "/root/coding/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb",
+      "miDebuggerPath": "gdb",
       "externalConsole": false,
       "setupCommands": [
         {
